@@ -1,21 +1,19 @@
 #include <iostream>
-using namespace std;
-
-struct Node {
-    int data;
-    Node* nextValue;
-};
-
-Node* createNewNode(int data) {
-    Node* newNode = new Node();
-    newNode->data = data;          
-    newNode->nextValue = nullptr;
-    return newNode;
-}
+#include "LinkedList.h"
+#include "Node.h"
 
 int main() {
-    Node* node1 = createNewNode(10);
-    cout << "Node data: " << node1->data << endl;
-    delete node1;
+    Node* head = new Node();
+    head->data = 10;
+
+    LinkedList list(head);
+
+    list.insertElement(20);
+    list.insertElement(30);
+    list.insertElement(40);
+
+    cout << "Conteúdo da lista ligada:" << endl;
+    list.traversal();
+
     return 0;
 }

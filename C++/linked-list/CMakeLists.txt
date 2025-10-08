@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(linked_list
         linked-list.cpp
-        LinkedList.cpp
-        LinkedList.h)
+        LinkedList.h
+        Node.h)
